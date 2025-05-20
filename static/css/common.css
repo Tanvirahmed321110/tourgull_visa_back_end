@@ -1,0 +1,498 @@
+@import './variable.css';
+@import './classs.css';
+
+
+
+/*===============================*/
+/*=======  For Home Page  =======*/
+/*===============================*/
+
+header {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header img {
+    max-width: 100%;
+}
+
+
+/*==============  banner start here  ==============*/
+.banner {
+    height: 600px;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(206, 204, 204, 0.118);
+    z-index: 3;
+}
+
+/*=====  search-content  =====*/
+.search-content {
+    position: relative;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0.684);
+    /* background-color: white; */
+    padding: 40px 50px;
+    padding-top: 16px;
+    height: 215px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1140px;
+    margin-top: 250px;
+    border-radius: 12px;
+}
+
+.search-content .my-input-control {
+    background-color: var(--white);
+    padding: 20px;
+    padding-top: 12px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-1);
+    /* border: 1px solid var(--border-color2); */
+    padding-bottom: 12px;
+}
+
+.search-content .my-input-control input {
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    padding: 4px;
+    padding-left: 0;
+    font-weight: 400;
+    border-bottom: 1px solid var(--border-color2);
+}
+
+.search-content .my-input-control input:focus {
+    border-bottom: 1px solid var(--border-color2);
+}
+
+.search-content .my-input-control label {
+    font-weight: var(--fw-500);
+    font-size: var(--fs-md);
+    cursor: pointer;
+}
+
+
+.search-content .my-input-control .label {
+    padding: 4px 24px;
+    border-radius: 6px;
+    top: -19px;
+    /* top: -28px; */
+    /* border: 1px solid var(--border-color2); */
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-content .search-btn {
+    width: 200px;
+    padding: 18px;
+    margin-top: 10px;
+}
+
+
+
+/* category */
+.category-area {
+    cursor: pointer;
+}
+
+.category-area .dropdown {
+    position: absolute;
+    left: 0;
+    top: 99%;
+    z-index: 5;
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    padding: 4px 0;
+    display: none;
+}
+
+
+.dropdown.active {
+    display: block;
+}
+
+.category-area .dropdown .dropdown-item {
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+
+
+
+/*=====  Category Area  =====*/
+.category-area .down-icon {
+    position: absolute;
+    right: 24px;
+    top: 26px;
+}
+
+.category-area .dropdown .dropdown-item.active {
+    font-weight: 500;
+}
+
+.category-area .dropdown .dropdown-item.active,
+.category-area .dropdown .dropdown-item:hover {
+    background-color: var(--border-color);
+}
+
+
+.ads-banner-1 {
+    height: 240px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ads-banner-1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 52, 52, 0.317);
+    border-radius: 6px;
+}
+
+.ads-banner-1 img {
+    height: 100%;
+    width: 100%;
+}
+
+.ads-banner-1 .content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+
+/*==============  Tab Section start here  ==============*/
+.search-country-name {
+    background-color: #F5EFEA !important;
+}
+
+.search-country-name input {
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--white);
+    padding: 14px;
+    box-shadow: var(--shadow-1);
+}
+
+
+
+
+.tab-contents .item,
+.destination-items .item {
+    position: relative;
+    transition: .25s linear;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.tab-contents .item:hover,
+.destination-items .item:hover {
+    border-color: var(--border-color2);
+}
+
+.tab-contents .item::after,
+.destination-items .item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    z-index: 4;
+    background-color: rgba(240, 248, 255, 0.468);
+    transition: .25s linear;
+}
+
+.tab-contents .item:hover::after,
+.destination-items .item:hover::after {
+    height: 100px;
+}
+
+.item .hide-content {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    transition: .3s linear;
+    background-color: rgba(71, 68, 68, 0.677);
+    padding: 12px;
+    z-index: 6;
+    color: wheat;
+}
+
+.item:hover .hide-content {
+    bottom: 0;
+}
+
+
+/*==============  suggest services start here  ==============*/
+
+.special-offer-slider ,.suggest-slider {
+    height:100%;
+    max-height:310px;
+}
+.suggest-services {
+    background-color: #F5EFEA;
+}
+
+.suggest-item {
+    position: relative;
+    /* padding: 2px; */
+    height: 244px;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.suggest-item .img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 12px;
+}
+
+.suggest-item .img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+
+.suggest-item .img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: rgba(47, 47, 47, 0.281);
+    z-index: 3;
+    transition: background-color .24s linear;
+}
+
+.suggest-item .text {
+    position: absolute;
+    z-index: 5;
+    bottom: 24px;
+    left: 24px;
+}
+
+.suggest-item:hover .img-wrapper::after {
+    background-color: unset;
+}
+
+
+
+
+
+
+/*==============  footer start here  ==============*/
+footer {
+    margin-top: auto;
+}
+
+footer .bp__footer-ul li a{
+    color: var(--border-color);
+}
+
+
+
+
+
+/*===========================================*/
+/*=======  For Visa Information Page  =======*/
+/*===========================================*/
+.information-and-form {
+    display: flex;
+    gap: 24px;
+}
+
+
+.information-and-form .left {
+    width: calc(100% - 374px);
+}
+
+
+.information-and-form .right-form {
+    width: 350px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-2);
+    border: 1px solid var(--border-color);
+    /* height: 222px; */
+    border-radius: 6px;
+    padding: 20px 16px;
+    background-color: #F5EFEA;
+    background-color: var(--primary-color);
+    background-color: var(--gray);
+}
+
+.right-form .my-input-control {
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-1);
+}
+
+.right-form .my-input-control input,
+.right-form textarea {
+    margin-top: 6px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color2);
+    padding: 0;
+}
+
+.right-form .my-input-control input:focus,
+.right-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+
+
+
+
+/*===========================================*/
+/*=======    For All Country   Page   =======*/
+/*===========================================*/
+.filter-and-result {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+}
+
+
+.filter-and-result .filter-sidebar-area {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color2);
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+
+.filter-category {
+    color: var(--primary-color);
+}
+
+.filter-category input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    padding: 0px;
+    appearance: none;
+    -webkit-appearance: none;
+    /* for Safari */
+    border: 1px solid var(--border-color2);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-category input[type='checkbox']:checked::before {
+    content: '✔';
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.keywords .key {
+    padding: 7px 12px;
+    border-radius: 2px;
+    background-color: var(--gray);
+    color: #F5EFEA;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.keywords .key:hover {
+    background-color: var(--primary-color);
+}
+
+
+
+/*==============  responsive  start here  ==============*/
+@media screen and (max-width: 768px) {
+
+    .filter-and-result {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /*=====  search-content  =====*/
+    .search-content {
+        position: relative;
+        z-index: 4;
+        background-color: rgba(255, 255, 255, 0.684);
+        padding: 28px;
+        height: 450px;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 100px;
+        border-radius: 12px;
+        width: 100%;
+    }
+
+    .search-content .my-input-control {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .my-input-control input {
+        max-width: 270px !important;
+    }
+
+    .information-and-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .information-and-form .left {
+        width: 100%;
+    }
+
+    .information-and-form .right-form {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
