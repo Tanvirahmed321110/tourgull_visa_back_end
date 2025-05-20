@@ -28,6 +28,9 @@
         'views/views.xml',
         'views/templates.xml',
         'templates/index.xml',
+        'templates/visa_info.xml',
+        'templates/all_country.xml',
+        'templates/all_country_blog.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

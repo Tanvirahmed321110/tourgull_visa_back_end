@@ -259,10 +259,12 @@ header img {
 
 /*==============  suggest services start here  ==============*/
 
-.special-offer-slider ,.suggest-slider {
-    height:100%;
-    max-height:310px;
+.special-offer-slider,
+.suggest-slider {
+    height: 100%;
+    max-height: 310px;
 }
+
 .suggest-services {
     background-color: #F5EFEA;
 }
@@ -325,8 +327,13 @@ footer {
     margin-top: auto;
 }
 
-footer .bp__footer-ul li a{
-    color: var(--border-color);
+footer li,
+footer p {
+    color: var(--border-color2);
+}
+
+footer .bp__footer-ul li {
+    color: var(--border-color2);
 }
 
 

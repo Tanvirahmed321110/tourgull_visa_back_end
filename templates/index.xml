@@ -9,7 +9,7 @@
                     <t t-if="website" t-esc="website.name"/>
                 </title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=2"/>
+                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=6"/>
             </t>
             <t t-set="footer">
                 <!--<script src="/as_rental/static/js/event-detail.js?v=11"/>-->
