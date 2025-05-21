@@ -8,6 +8,7 @@ class Tourgull_visa(models.Model):
     # For Slider
     slider = fields.Image(string='Slider Image', required=True)
     slider_image_url = fields.Char(string='Slider Image Url')
+    slider_title = fields.Char(string='Slider Title')
 
     # For ad 1
     ad1_image = fields.Image(string='Ad1 Image')
@@ -18,3 +19,16 @@ class Tourgull_visa(models.Model):
     # For ad 2
     ad2_image = fields.Image(string='Ad2 Image')
     ad2_image_url = fields.Char(string='Ad2 Image Url')
+
+    # For filter section title and desc
+    filter_section_title = fields.Char(string = 'Filter Section Title')
+    filter_section_description = fields.Char(string = 'Filter Section Description')
+
+    # For Suggest Service Section Title and Desc
+    suggest_servie_section_title = fields.Char(string = 'Suggest Service Section Title')
+    suggest_service_section_description = fields.Char(string = 'Suggest Service Section Description')
+
+    # For Offer Section Title and Desc
+    offer_section_title = fields.Char(string='Offer Section Title')
+    offer_section_description = fields.Char(string='Offer  Section Description')
+
