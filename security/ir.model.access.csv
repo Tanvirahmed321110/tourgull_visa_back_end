@@ -2,3 +2,6 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 tourgull_visa_home,tourgull_visa_home,model_tourgull_visa_home,,1,1,1,1,
 tourgull_visa_all_country_blog,tourgull_visa_all_country_blog,model_tourgull_visa_all_country_blog,,1,1,1,1
 tourgull_visa_visa_info,tourgull_visa_visa_info,model_tourgull_visa_visa_info,,1,1,1,1
+tourgull_visa_all_country,tourgull_visa_all_country,model_tourgull_visa_all_country,,1,1,1,1
+tourgull_visa_country,tourgull_visa_country,model_tourgull_visa_country,,1,1,1,1
+tourgull_visa_category,tourgull_visa_category,model_tourgull_visa_category,,1,1,1,1

@@ -31,6 +31,9 @@
         'views/index_views.xml',
         'views/all_country_blog_view.xml',
         'views/visa_info_view.xml',
+        'views/all_country_view.xml',
+        'views/country_view.xml',
+        'views/category_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

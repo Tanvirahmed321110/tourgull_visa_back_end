@@ -1,15 +1,22 @@
 <odoo>
     <!--=======  Root Menu  ======-->
-    <menuitem name="Visa" id="menu_visa_root" sequence="21"/>
+    <menuitem name="Visa" id="menu_visa_root" sequence="0"/>
 
     <!--======= Submenu Parent Root ======-->
     <menuitem
             name="Pages"
             id="menu_pages"
             parent="menu_visa_root"
-            sequence="10"/>
+            sequence="0"/>
 
-     <!--======= Submenu Parent Pages ======-->
+    <!--======= Submenu Parent Root ======-->
+    <menuitem
+            name="Visa"
+            id="menu_visa"
+            parent="menu_visa_root"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Pages ======-->
     <menuitem
             name="Home"
             id="menu_home"
@@ -31,5 +38,29 @@
             id="menu_visa_info"
             parent="menu_pages"
             action="tourgull_visa_info_action"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Pages ======-->
+    <menuitem
+            name="All Country"
+            id="menu_all_country"
+            parent="menu_pages"
+            action="tourgull_visa_county_action"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Visa ======-->
+    <menuitem
+            name="Country"
+            id="menu_country"
+            parent="menu_visa"
+            action="tourgull_county_action"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Visa ======-->
+    <menuitem
+            name="Category"
+            id="menu_category"
+            parent="menu_visa"
+            action="tourgull_category_action"
             sequence="0"/>
 </odoo>
