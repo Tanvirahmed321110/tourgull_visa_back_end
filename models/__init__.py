@@ -6,3 +6,5 @@ from . import visa_info
 from . import all_country
 from . import country_model
 from . import category_model
+from . import suggest_slider_model
+from . import offer_slider_model

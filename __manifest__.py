@@ -34,6 +34,8 @@
         'views/all_country_view.xml',
         'views/country_view.xml',
         'views/category_view.xml',
+        'views/suggest_service_slider_view.xml',
+        'views/offer_slider_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

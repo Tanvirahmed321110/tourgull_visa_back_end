@@ -9,14 +9,14 @@
             parent="menu_visa_root"
             sequence="0"/>
 
-    <!--======= Submenu Parent Root ======-->
+    <!--======= Submenu Parent Menu Root ======-->
     <menuitem
             name="Visa"
             id="menu_visa"
             parent="menu_visa_root"
             sequence="0"/>
 
-    <!--======= Submenu Parent Pages ======-->
+    <!--======= Submenu Parent Menu Pages ======-->
     <menuitem
             name="Home"
             id="menu_home"
@@ -24,7 +24,7 @@
             action="tourgull_visa_home_action"
             sequence="0"/>
 
-    <!--======= Submenu Parent Pages ======-->
+    <!--======= Submenu Parent Menu Pages ======-->
     <menuitem
             name="Country Blog"
             id="menu_county_blog"
@@ -32,7 +32,7 @@
             action="tourgull_visa_county_blog_action"
             sequence="0"/>
 
-    <!--======= Submenu Parent Pages ======-->
+    <!--======= Submenu Parent Menu Pages ======-->
     <menuitem
             name="Visa Info"
             id="menu_visa_info"
@@ -40,7 +40,7 @@
             action="tourgull_visa_info_action"
             sequence="0"/>
 
-    <!--======= Submenu Parent Pages ======-->
+    <!--======= Submenu Parent Menu Pages ======-->
     <menuitem
             name="All Country"
             id="menu_all_country"
@@ -48,7 +48,7 @@
             action="tourgull_visa_county_action"
             sequence="0"/>
 
-    <!--======= Submenu Parent Visa ======-->
+    <!--======= Submenu Parent Menu Visa ======-->
     <menuitem
             name="Country"
             id="menu_country"
@@ -56,11 +56,27 @@
             action="tourgull_county_action"
             sequence="0"/>
 
-    <!--======= Submenu Parent Visa ======-->
+    <!--======= Submenu Parent Menu Visa ======-->
     <menuitem
             name="Category"
             id="menu_category"
             parent="menu_visa"
             action="tourgull_category_action"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Menu Visa ======-->
+    <menuitem
+            name="Offer Slider"
+            id="menu_offer_slider"
+            parent="menu_visa"
+            action="tourgull_offer_slider_action"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Menu Visa ======-->
+    <menuitem
+            name="Suggest Service Slider"
+            id="menu_suggest_slider"
+            parent="menu_visa"
+            action="tourgull_suggest_slider_action"
             sequence="0"/>
 </odoo>
