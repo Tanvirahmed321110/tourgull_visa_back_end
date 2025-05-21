@@ -1,7 +1,7 @@
 <odoo>
     <data>
         <!-- ========  List View  =======-->
-        <record model="ir.ui.view" id="tourgull_visa_country_list">
+        <record model="ir.ui.view" id="tourgull_visa_category_list">
             <field name="name">Tourgull  Category </field>
             <field name="model">tourgull_visa.category</field>
             <field name="arch" type="xml">
@@ -13,7 +13,7 @@
 
 
         <!-- ========  Form  View  =======-->
-        <record model="ir.ui.view" id="tourgull_visa_all_country_blog_form">
+        <record model="ir.ui.view" id="tourgull_visa_category_form">
             <field name="name">Tourgull all Category Form</field>
             <field name="model">tourgull_visa.category</field>
             <field name="arch" type="xml">

@@ -29,7 +29,7 @@
             name="Country Blog"
             id="menu_county_blog"
             parent="menu_pages"
-            action="tourgull_visa_county_blog_action"
+            action="tourgull_visa_all_country_blog_action"
             sequence="0"/>
 
     <!--======= Submenu Parent Menu Pages ======-->
@@ -45,7 +45,7 @@
             name="All Country"
             id="menu_all_country"
             parent="menu_pages"
-            action="tourgull_visa_county_action"
+            action="tourgull_visa_all_country_action"
             sequence="0"/>
 
     <!--======= Submenu Parent Menu Visa ======-->
