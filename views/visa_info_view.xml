@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <!-- ========  List View  =======-->
+        <record model="ir.ui.view" id="tourgull_visa_info_list">
+            <field name="name">Tourgull visa info</field>
+            <field name="model">tourgull_visa.visa_info</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="slider_image_url"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- ========  Form  View  =======-->
+        <record model="ir.ui.view" id="tourgull_visa_country_blog_form">
+            <field name="name">Tourgull visa info Form</field>
+            <field name="model">tourgull_visa.visa_info</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Sidebar -->
+                            <group string="Slider">
+                                <field name="slider_image" widget="image" class="oe_avatar"  options="{'size': [90, 90]}"/>
+                                <field name="slider_image_url"/>
+                            </group>
+
+                             <!-- Ad  -->
+                            <group string="Ad">
+                                <field name="ad_image" widget="image" class="oe_avatar"  options="{'size': [90, 90]}"/>
+                                <field name="ad_image_url"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- ========  Action View  =======-->
+        <record model="ir.actions.act_window" id="tourgull_visa_info_action">
+            <field name="name">Tourgull Visa info window</field>
+            <field name="res_model">tourgull_visa.visa_info</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

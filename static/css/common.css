@@ -106,7 +106,9 @@ header img {
     padding: 18px;
     margin-top: 10px;
 }
-
+.search-content .search-btn:hover {
+    color:white;
+}
 
 
 /* category */

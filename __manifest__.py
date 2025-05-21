@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "my_module",
+    'name': "Visa Module",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Tourgull Visa Module""",
 
     'description': """
         Long description of module's purpose
     """,
 
-    'author': "My Company",
+    'author': "Abdur Razzak , Tanvir",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -20,17 +19,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'as_rental'],
+    'depends': ['base', 'as_rental', 'mail'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
         'templates/index.xml',
         'templates/visa_info.xml',
         'templates/all_country.xml',
         'templates/all_country_blog.xml',
+        'views/index_views.xml',
+        'views/all_country_blog_view.xml',
+        'views/visa_info_view.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -9,7 +9,7 @@
                     <t t-if="website" t-esc="website.name"/>
                 </title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=6"/>
+                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=7"/>
             </t>
             <t t-set="footer">
                 <!--<script src="/as_rental/static/js/event-detail.js?v=11"/>-->
@@ -72,7 +72,7 @@
 
                                         <!-- search button -->
                                         <div class="my-mt-5 my-flex-center">
-                                            <a href="./visa_info.html" class="search-btn my-primary-btn my-btn">Search
+                                            <a href="/visa/visa_info" class="search-btn my-primary-btn my-btn">Search
                                             </a>
                                         </div>
                                     </form>
@@ -93,7 +93,7 @@
                             <img class="my-radius-md  " src="/tourgull_visa/static/images/ads2.png" alt=""/>
                             <!-- content -->
                             <div class="content my-grid-3 ">
-                                <div></div>
+                                <div> </div>
                                 <div>
                                     <p class="my-fw-bold my-fs-md my-text-white">Plan Your Next Your</p>
                                     <h3 class="my-uppercase my-fw-bolder my-text-white my-mt-1">Use our tour planner
@@ -490,7 +490,7 @@
 
                             <!-- For see all -->
                             <div class="my-text-right my-mt-4">
-                                <a class="my-text-blue my-border-bottom-blue" href="./all_country.html">See All</a>
+                                <a class="my-text-blue my-border-bottom-blue" href="/visa/all_country">See All</a>
                             </div>
                         </div>
                     </div>
@@ -641,7 +641,7 @@
                                 </div>
                                 <div>
                                     <a class="my-text-blue my-fs-md my-border-bottom-blue my-text-primary-hover"
-                                       href="./all_country_blogs.html">See all
+                                       href="/visa/all_country_blog">See all
                                     </a>
                                 </div>
                             </div>
