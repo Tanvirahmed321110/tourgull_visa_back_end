@@ -14,8 +14,8 @@ class Tourgull_visa(models.Model):
     ad_image = fields.Image(string='Ad Image' )
     ad_image_url = fields.Char(string='Ad Image Url')
 
-    # For Offer Section Title and Desc
-    offer_section_title = fields.Char(string='Offer Section Title')
-    offer_section_description = fields.Char(string='Offer  Section Description')
+    # For Suggest Service Section Title and Desc
+    suggest_servie_section_title = fields.Char(string='Suggest Service Section Title')
+    suggest_service_section_description = fields.Char(string='Suggest Service Section Description')
 
 

@@ -8,7 +8,8 @@
                 <tree>
                     <field name="slider_image_url"/>
                     <field name="slider_top_content_title"/>
-                    <field name="slider_top_content_description"/>
+                    <field name="suggest_servie_section_title"/>
+                    <field name="suggest_service_section_description"/>
                 </tree>
             </field>
         </record>
@@ -37,10 +38,10 @@
                                 <field name="all_country_section_description"/>
                             </group>
 
-                            <!--  Offer  Section Title, Desc  -->
-                            <group string="Offer Section Title, Desc">
-                                <field name="offer_section_title"/>
-                                <field name="offer_section_description"/>
+                             <!-- suggest service title  and desc-->
+                            <group string="Suggest Service Section Title and Desc">
+                                <field name="suggest_servie_section_title"/>
+                                <field name="suggest_service_section_description"/>
                             </group>
 
                         </group>

@@ -8,7 +8,6 @@
                 <tree>
                     <field name="name"/>
                     <field name="url"/>
-                    <field name="button_name"/>
                 </tree>
             </field>
         </record>
@@ -19,7 +18,7 @@
             <field name="name">Tourgull Suggest Slider Form</field>
             <field name="model">tourgull_visa.suggest_service_slider</field>
             <field name="arch" type="xml">
-                <form>
+               <form>
                     <sheet>
                         <group string="Suggest Slider Information">
                             <group>
@@ -28,7 +27,6 @@
                             </group>
                             <group>
                                 <field name="url"/>
-                                <field name="button_name"/>
                             </group>
                         </group>
                     </sheet>
@@ -46,3 +44,5 @@
 
     </data>
 </odoo>
+
+

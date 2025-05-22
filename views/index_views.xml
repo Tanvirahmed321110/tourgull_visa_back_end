@@ -56,17 +56,19 @@
                                 <field name="country_info_description"/>
                             </group>
 
-                            <!-- suggest service title  and desc-->
-                            <group string="Suggest Service Section Title and Desc">
-                                <field name="suggest_servie_section_title"/>
-                                <field name="suggest_service_section_description"/>
-                            </group>
 
                             <!-- offer section title -->
                             <group string="Offer  Section Title and Desc">
                                 <field name="offer_section_title"/>
                                 <field name="offer_section_description"/>
                             </group>
+
+                            <!-- suggest service title  and desc-->
+                            <group string="Suggest Service Section Title and Desc">
+                                <field name="suggest_servie_section_title"/>
+                                <field name="suggest_service_section_description"/>
+                            </group>
+
                         </group>
                     </sheet>
                 </form>

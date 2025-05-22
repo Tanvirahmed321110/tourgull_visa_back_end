@@ -13,8 +13,8 @@ class Tourgull_visa(models.Model):
     slider_top_content_title = fields.Char(string='Slider Content Title')
     slider_top_content_description = fields.Char(string='Slider Content Description')
 
-    # For Offer Section Title and Desc
-    offer_section_title = fields.Char(string='Offer Section Title')
-    offer_section_description = fields.Char(string='Offer  Section Description')
+    # For Suggest Service Section Title and Desc
+    suggest_servie_section_title = fields.Char(string = 'Suggest Service Section Title')
+    suggest_service_section_description = fields.Char(string = 'Suggest Service Section Description')
 
 

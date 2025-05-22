@@ -28,11 +28,13 @@ class Tourgull_visa(models.Model):
     country_info_title = fields.Char(string = 'Country Info Section Title')
     country_info_description = fields.Char(string = 'County Info Section Description')
 
-    # For Suggest Service Section Title and Desc
-    suggest_servie_section_title = fields.Char(string = 'Suggest Service Section Title')
-    suggest_service_section_description = fields.Char(string = 'Suggest Service Section Description')
 
     # For Offer Section Title and Desc
     offer_section_title = fields.Char(string='Offer Section Title')
     offer_section_description = fields.Char(string='Offer  Section Description')
+
+
+    # For Suggest Service Section Title and Desc
+    suggest_servie_section_title = fields.Char(string = 'Suggest Service Section Title')
+    suggest_service_section_description = fields.Char(string = 'Suggest Service Section Description')
 

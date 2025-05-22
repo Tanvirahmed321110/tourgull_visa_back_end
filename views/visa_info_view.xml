@@ -8,8 +8,8 @@
                 <tree>
                     <field name="slider_image_url"/>
                     <field name="slider_title"/>
-                    <field name="offer_section_title"/>
-                    <field name="offer_section_description"/>
+                    <field name="suggest_servie_section_title"/>
+                    <field name="suggest_service_section_description"/>
                 </tree>
             </field>
         </record>
@@ -37,10 +37,10 @@
                                 <field name="ad_image_url"/>
                             </group>
 
-                            <!-- offer section title -->
-                            <group string="Offer  Section Title and Desc">
-                                <field name="offer_section_title"/>
-                                <field name="offer_section_description"/>
+                            <!-- suggest service title  and desc-->
+                            <group string="Suggest Service Section Title and Desc">
+                                <field name="suggest_servie_section_title"/>
+                                <field name="suggest_service_section_description"/>
                             </group>
                         </group>
                     </sheet>
