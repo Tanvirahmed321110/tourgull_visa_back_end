@@ -111,6 +111,7 @@ header img {
 }
 
 
+
 /* category */
 .category-area {
     cursor: pointer;
@@ -251,7 +252,7 @@ header img {
     background-color: rgba(71, 68, 68, 0.677);
     padding: 12px;
     z-index: 6;
-    color: wheat;
+    color: wheat !important;
 }
 
 .item:hover .hide-content {
@@ -388,6 +389,10 @@ footer .bp__footer-ul li {
 .right-form .my-input-control input:focus,
 .right-form textarea:focus {
     border-color: var(--primary-color);
+}
+
+.special-offer-slider .my-primary-btn{
+    color:var(--border-color) !important ;
 }
 
 

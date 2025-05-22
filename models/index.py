@@ -6,19 +6,26 @@ class Tourgull_visa(models.Model):
     _name = 'tourgull_visa.home'
 
     # For Slider
-    slider = fields.Image(string='Slider Image', required=True)
+    slider = fields.Image(string='Slider Image')
     slider_image_url = fields.Char(string='Slider Image Url')
     slider_title = fields.Char(string='Slider Title')
+
+    # For Video Slide
+    is_video = fields.Boolean(string='Is Video?')
+    video_file = fields.Binary(string='Video File')
+    video_filename = fields.Char(string='Filename')
 
     # For ad 1
     ad1_image = fields.Image(string='Ad1 Image')
     ad1_image_url = fields.Char(string='Ad1 Image Url')
     ad1_title = fields.Char(string='Ad1 Title')
     ad1_description = fields.Char(string='Ad1 Description')
+    ad1_url = fields.Char(string='Url')
 
     # For ad 2
     ad2_image = fields.Image(string='Ad2 Image')
     ad2_image_url = fields.Char(string='Ad2 Image Url')
+    ad2_url = fields.Char(string='Url')
 
     # For filter section title and desc
     filter_section_title = fields.Char(string = 'Filter Section Title')
