@@ -48,12 +48,12 @@
                 </form>
             </field>
         </record>
-        >
+
 
 
         <!-- ========  Action View  =======-->
         <record model="ir.actions.act_window" id="tourgull_visa_all_country_blog_action">
-            <field name="name">Tourgull Visa Country Blog new window</field>
+            <field name="name">Tourgull Visa Country Blog  </field>
             <field name="res_model">tourgull_visa.all_country_blog</field>
             <field name="view_mode">tree,form</field>
         </record>

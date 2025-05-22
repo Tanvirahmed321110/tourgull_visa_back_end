@@ -1,0 +1,64 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_country_to_country_info_tree" model="ir.ui.view">
+        <field name="name">tourgull_visa.country_to_country_info.tree</field>
+        <field name="model">tourgull_visa.country_to_country_info</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="form"/>
+                <field name="to"/>
+                <field name="category_id"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="view_country_to_country_info_form" model="ir.ui.view">
+        <field name="name">tourgull_visa.country_to_country_info.form</field>
+        <field name="model">tourgull_visa.country_to_country_info</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Country Name and Category">
+                        <field name="form"/>
+                        <field name="to"/>
+                        <field name="category_id"/>
+                    </group>
+                    <group string="All Information">
+                        <notebook>
+                            <page string="Information">
+                                <field name="information"/>
+                            </page>
+                            <page string="Process Time">
+                                <field name="process_time"/>
+                            </page>
+                            <page string="FAQ">
+                                <field name="faq"/>
+                            </page>
+                            <page string="Offices">
+                                <field name="head_office_regional_office"/>
+                            </page>
+                            <page string="Visa Free">
+                                <field name="visa_free"/>
+                            </page>
+                            <page string="Photo Specification">
+                                <field name="photo_specification"/>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record model="ir.actions.act_window" id="action_country_to_country_info">
+        <field name="name">Visa Info</field>
+        <field name="res_model">tourgull_visa.country_to_country_info</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create visa information between countries.</p>
+        </field>
+    </record>
+</odoo>

@@ -79,4 +79,20 @@
             parent="menu_visa"
             action="tourgull_suggest_slider_action"
             sequence="0"/>
+
+    <!--======= Submenu Parent Menu Visa ======-->
+    <menuitem
+            name="Country To Country Info"
+            id="menu_country_to_country_info"
+            parent="menu_visa"
+            action="action_country_to_country_info"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Menu Visa ======-->
+    <menuitem
+            name="Contact"
+            id="menu_contact"
+            parent="menu_visa"
+            action="action_tourgull_visa_contact"
+            sequence="0"/>
 </odoo>

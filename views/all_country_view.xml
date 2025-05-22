@@ -33,6 +33,12 @@
                                 <field name="slider_top_content_title"/>
                                 <field name="slider_top_content_description"/>
                             </group>
+
+                              <!-- offer section title -->
+                            <group string="Offer  Section Title and Desc">
+                                <field name="offer_section_title"/>
+                                <field name="offer_section_description"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
