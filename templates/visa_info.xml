@@ -16,9 +16,9 @@
             <!--  Footer File   -->
             <t t-set="footer">
                 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js?v=1"></script>
 
-                <script src="/tourgull_visa/static/js/main.js"></script>
+                <script src="/tourgull_visa/static/js/main.js?v=1"></script>
             </t>
 
 
@@ -35,13 +35,14 @@
                                     <source src="./banner-video1.mp4" type="video/mp4">
                                 </video> -->
                                 <img class="banner-video"
-                                     src="https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
+                                     t-att-src="image_data_uri(visa_data.slider_image)"
                                      alt=""/>
 
                                 <!--===== Search Content =====-->
                                 <div class="search-content">
 
-                                    <h1 class="my-text-center my-fs-xxl">Welcome To...</h1>
+                                    <h1 class="my-text-center my-fs-xxl" t-esc="visa_data.slider_title">Welcome To...
+                                    </h1>
                                     <form action="#" class="my-mt-2">
 
                                         <!-- search input and category -->
@@ -98,15 +99,16 @@
                                 <div class="tab-area">
                                     <div class="tab-buttons ">
                                         <ul class="my-d-flex my-gap-2 my-flex-md-column my-grid-3 my-grid-md-2">
-                                            <li class="tab-button active" data-tab="information">Information and
+                                            <li t-foreach="category" t-as="item" t-esc="item.name"
+                                                class="tab-button active" t-att-data-tab="item.id">Information and
                                                 Requirement
                                             </li>
-                                            <li class="tab-button" data-tab="progessing_time">Progessing Time</li>
-                                            <li class="tab-button" data-tab="faq">FAQ</li>
-                                            <li class="tab-button" data-tab="office">Head office and Regional office
-                                            </li>
-                                            <li class="tab-button" data-tab="visa_free">Visa Free</li>
-                                            <li class="tab-button" data-tab="specification">Photo Specification</li>
+                                            <!--                                            <li class="tab-button" data-tab="progessing_time">Progessing Time</li>-->
+                                            <!--                                            <li class="tab-button" data-tab="faq">FAQ</li>-->
+                                            <!--                                            <li class="tab-button" data-tab="office">Head office and Regional office-->
+                                            <!--                                            </li>-->
+                                            <!--                                            <li class="tab-button" data-tab="visa_free">Visa Free</li>-->
+                                            <!--                                            <li class="tab-button" data-tab="specification">Photo Specification</li>-->
                                         </ul>
                                     </div>
                                 </div>
@@ -116,7 +118,7 @@
                                 <div class="tab-contents my-mt-4">
 
                                     <!--=========  For information  ========-->
-                                    <div class="tab-content active" id="into_1">
+                                    <div class="tab-content active" id="1">
                                         <div>
                                             <h3>information</h3>
                                             <div class="my-p-2">
@@ -170,7 +172,7 @@
                                         </div>
                                     </div>
                                     <!--=========  For information  ========-->
-                                    <div class="tab-content " id="into_2">
+                                    <div class="tab-content " id="2">
                                         <div>
                                             <h4>progessing_time</h4>
                                             <ul class="my-p-2 disk">
@@ -186,7 +188,7 @@
                                         </div>
                                     </div>
                                     <!--=========  For information  ========-->
-                                    <div class="tab-content " id="into_3">
+                                    <div class="tab-content " id="3">
                                         <div>
                                             <h4>information</h4>
                                             <div class="my-p-3">
@@ -205,7 +207,7 @@
                                         </div>
                                     </div>
                                     <!--=========  For information  ========-->
-                                    <div class="tab-content " id="into_4">
+                                    <div class="tab-content " id="4">
                                         <div>
                                             <h4>information</h4>
                                             <div class="my-p-2">
@@ -229,7 +231,7 @@
                                         </div>
                                     </div>
                                     <!--=========  For information  ========-->
-                                    <div class="tab-content " id="into_5">
+                                    <div class="tab-content " id="5">
                                         <div>
                                             <h4>information</h4>
                                             <div class="my-p-2">
@@ -245,7 +247,7 @@
                                         </div>
                                     </div>
                                     <!--=========  For information  ========-->
-                                    <div class="tab-content " id="into_6">
+                                    <div class="tab-content " id="6">
                                         <div>
                                             <h4>information</h4>
                                             <div class="my-p-2">
@@ -270,32 +272,36 @@
                                 <div class=" right-form my-p-3 ">
                                     <h3 class="my-text-white">Information</h3>
 
-                                    <form action=" #" class="my-flex-column my-gap-1">
+                                    <form action="/visa/contact_submit" method="POST" class="my-flex-column my-gap-1">
+                                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
                                         <!-- for name -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Name</div>
-                                            <input type="text"/>
+                                            <input  type="text" name="name"/>
                                         </div>
 
-                                        <!-- for name -->
+                                        <!-- for email -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Email</div>
-                                            <input type="text"/>
+                                            <input type="email" name="email" />
                                         </div>
 
-                                        <!-- for name -->
+                                        <!-- for phone -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Phone</div>
-                                            <input type="text"/>
+                                            <input  type="text" required="required" name="phone"/>
                                         </div>
 
-                                        <!-- for name -->
+                                        <!-- for description -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Note</div>
-                                            <textarea> </textarea>
+                                           <textarea name="description" required="required"></textarea>
                                         </div>
+
+                                        <!--  submit button -->
                                         <div class="my-mt-2">
-                                            <button class="my-btn my-primary-btn my-w-100">Submit</button>
+                                            <button type="submit" class="my-btn my-primary-btn my-w-100">Submit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -313,7 +319,7 @@
                         <div>
                             <a href="#">
                                 <img class="my-radius-md  my-border my-p-1"
-                                     src="https://storage.googleapis.com/gz-main-prod-main/media/campaign/img_2a5b30ce-da7a-4e09-9132-7502bb4bf498.jpg"
+                                     t-att-src="image_data_uri(visa_data.ad_image)"
                                      alt=""/>
                             </a>
                         </div>
@@ -327,75 +333,28 @@
                 <section class=" my-mt-10 my-p-4 suggest-services my-radius-md">
                     <div class="my-container">
                         <div class="my-text-center">
-                            <h3 class="my-uppercase ">Suggest Services</h3>
-                            <p>Short Description</p>
+                            <h3 class="my-uppercase " t-esc="visa_data.suggest_servie_section_title">Suggest Services
+                            </h3>
+                            <p t-esc="visa_data.suggest_service_section_description">Short Description</p>
                         </div>
                         <div class=" my-mt-4">
                             <div class="swiper suggest-slider mt-mt-2">
                                 <div class="swiper-wrapper mt-pt-2">
 
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/5192667/pexels-photo-5192667.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
+                                    <t t-foreach="suggest_slider" t-as="item">
+                                        <!-- single service item -->
+                                        <a href="item.url" class="swiper-slide">
+                                            <div class="my-p-relative suggest-item">
+                                                <div class="img-wrapper">
+                                                    <img class="my-radius-md"
+                                                         t-att-src="image_data_uri(item.image_1920)"
+                                                         alt=""/>
+                                                </div>
+                                                <h4 class="my-text-white text" t-esc="item.name">Bangladesh</h4>
+
                                             </div>
-                                            <h4 class="my-text-white text">Bangladesh</h4>
-
-                                        </div>
-                                    </div>
-
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/10835243/pexels-photo-10835243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Nepal</h4>
-
-                                        </div>
-                                    </div>
-
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Kasmir</h4>
-                                        </div>
-                                    </div>
-
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/6871148/pexels-photo-6871148.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Maldip</h4>
-                                        </div>
-                                    </div>
-
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/19828854/pexels-photo-19828854/free-photo-of-city-buildings-with-the-karst-formations-of-the-ha-long-bay-in-the-background.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Pakistan</h4>
-                                        </div>
-                                    </div>
-
+                                        </a>
+                                    </t>
 
                                 </div>
                             </div>

@@ -19,8 +19,48 @@ activeF('.tab-buttons .tab-button')
 
 
 
-// For Tabs here
-function setupTabs(buttonSelector, contentSelector, tabMap) {
+//// For Tabs here
+//function setupTabs(buttonSelector, contentSelector, tabMap) {
+//    const tabButtons = document.querySelectorAll(buttonSelector);
+//    const tabContents = document.querySelectorAll(contentSelector);
+//
+//    if (tabButtons.length === 0 || tabContents.length === 0) return;
+//
+//    tabButtons.forEach(button => {
+//        button.addEventListener('click', () => {
+//            // Remove active class from all buttons
+//            tabButtons.forEach(btn => btn.classList.remove('active'));
+//            button.classList.add('active');
+//
+//            // Hide all tab contents
+//            tabContents.forEach(content => content.classList.remove('active'));
+//
+//            // Get target content id from map
+//            const tabName = button.getAttribute('data-tab');
+//            const targetContentId = tabMap[tabName];
+//
+//            const targetContent = document.getElementById(targetContentId);
+//            if (targetContent) {
+//                targetContent.classList.add('active');
+//            }
+//        });
+//    });
+//}
+//
+//
+//// Usage tab for visa information page
+//setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
+//    information: 'into_1',
+//    progessing_time: 'into_2',
+//    faq: 'into_3',
+//    office: 'into_4',
+//    visa_free: 'into_5',
+//    specification: 'into_6',
+//});
+
+
+// Tab Function Here
+function setupTabs(buttonSelector, contentSelector) {
     const tabButtons = document.querySelectorAll(buttonSelector);
     const tabContents = document.querySelectorAll(contentSelector);
 
@@ -28,18 +68,16 @@ function setupTabs(buttonSelector, contentSelector, tabMap) {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
+            // Remove active from all buttons
             tabButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            // Hide all tab contents
+            // Remove active from all contents
             tabContents.forEach(content => content.classList.remove('active'));
 
-            // Get target content id from map
-            const tabName = button.getAttribute('data-tab');
-            const targetContentId = tabMap[tabName];
-
-            const targetContent = document.getElementById(targetContentId);
+            // Activate the matching content
+            const targetId = button.getAttribute('data-tab');
+            const targetContent = document.getElementById(targetId);
             if (targetContent) {
                 targetContent.classList.add('active');
             }
@@ -47,18 +85,12 @@ function setupTabs(buttonSelector, contentSelector, tabMap) {
     });
 }
 
-
-// Usage tab for visa information page
-setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content', {
-    information: 'into_1',
-    progessing_time: 'into_2',
-    faq: 'into_3',
-    office: 'into_4',
-    visa_free: 'into_5',
-    specification: 'into_6',
-});
+// Call the function
+setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content');
 
 
+
+// Slider Function
 function sliderF(className) {
     const slider = document.querySelector(className)
     if (slider) {

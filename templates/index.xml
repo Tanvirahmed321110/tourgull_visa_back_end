@@ -9,7 +9,7 @@
                     <t t-if="website" t-esc="website.name"/>
                 </title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=17"/>
+                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=18"/>
             </t>
             <t t-set="footer">
                 <!--<script src="/as_rental/static/js/event-detail.js?v=11"/>-->
@@ -17,8 +17,8 @@
                 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-                <script src="/tourgull_visa/static/js/main.js"></script>
-                <script src="/tourgull_visa/static/js/index.js"></script>
+                <script src="/tourgull_visa/static/js/main.js?v=1"></script>
+                <script src="/tourgull_visa/static/js/index.js?v=1"></script>
             </t>
 
 
@@ -61,7 +61,8 @@
 
                                             <!-- Category Dropdown -->
                                             <div class="dropdown">
-                                                <div class="dropdown-item" t-foreach="categories" t-as="item" t-esc="item.name"> </div>
+                                                <div class="dropdown-item" t-foreach="categories" t-as="item"
+                                                     t-esc="item.name"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,15 +122,13 @@
                     <div class="tab-area my-mt-3">
                         <div class="tab-buttons my-align-start my-flex-between my-gap-2 my-flex-md-column">
                             <ul class="my-d-flex my-gap-2 my-flex-md-column">
-                                <t t-foreach="categories" t-as="category">
-                                    <li class="tab-button active" t-att-data-tab="category.id" t-esc="category.name">
-                                        Tourist
-                                    </li>
-                                    <!--                                    <li class="tab-button" data-tab="business">Business Investment</li>-->
-                                    <!--                                    <li class="tab-button" data-tab="medical">Medical Treatment</li>-->
-                                    <!--                                    <li class="tab-button" data-tab="stydy">Study Training</li>-->
-                                    <!--                                    <li class="tab-button" data-tab="other">Other</li>-->
-                                </t>
+                                <li class="tab-button active" t-att-data-tab="Tourist">
+                                    Tourist
+                                </li>
+                                <li class="tab-button" data-tab="business">Business Investment</li>
+                                <li class="tab-button" data-tab="medical">Medical Treatment</li>
+                                <li class="tab-button" data-tab="stydy">Study Training</li>
+                                <li class="tab-button" data-tab="other">Other</li>
                             </ul>
 
                             <div class="my-bg-white-off my-p-2 my-px-4 search-country-name my-radius-md">
@@ -145,7 +144,7 @@
                     <div class="tab-contents my-mt-4">
 
                         <!--=========  For Tourist  ========-->
-                        <div class="tab-content active" id="tab1">
+                        <div class="tab-content active" id="Tourist">
 
                             <div class=" my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
@@ -303,7 +302,7 @@
                         </div>
 
                         <!--=========  For Business and Investment  ========-->
-                        <div class="tab-content  " id="tab2">
+                        <div class="tab-content  " id="business">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
@@ -325,7 +324,7 @@
 
 
                         <!--=========  For Medical &amp; Treatment  ========-->
-                        <div class="tab-content" id="tab3">
+                        <div class="tab-content" id="medical">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
@@ -383,7 +382,7 @@
 
 
                         <!--=========  For Study &amp; Training  ========-->
-                        <div class="tab-content  " id="tab4">
+                        <div class="tab-content  " id="stydy">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
@@ -423,7 +422,7 @@
 
 
                         <!--=========  For Others  ========-->
-                        <div class="tab-content  " id="tab5">
+                        <div class="tab-content  " id="other">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
@@ -640,7 +639,7 @@
                             <div class="swiper-wrapper mt-pt-2">
 
                                 <!-- single service item -->
-                                <div class="swiper-slide" t-foreach="suggest_slider" t-as="item">
+                                <a href="item.url" class="swiper-slide" t-foreach="suggest_slider" t-as="item">
                                     <div class="my-p-relative suggest-item">
                                         <div class="img-wrapper">
                                             <img class="my-radius-md"
@@ -649,7 +648,7 @@
                                         </div>
                                         <h4 class="my-text-white text" t-esc="item.name">Bangladesh</h4>
                                     </div>
-                                </div>
+                                </a>
 
                             </div>
                         </div>

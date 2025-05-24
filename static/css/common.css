@@ -155,6 +155,7 @@ header img {
 .category-area .dropdown .dropdown-item.active,
 .category-area .dropdown .dropdown-item:hover {
     background-color: var(--border-color);
+    color:var(--text-color)
 }
 
 

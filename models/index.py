@@ -45,3 +45,9 @@ class Tourgull_visa(models.Model):
     suggest_servie_section_title = fields.Char(string = 'Suggest Service Section Title')
     suggest_service_section_description = fields.Char(string = 'Suggest Service Section Description')
 
+    @api.constrains('video_filename')
+    def _check_video_format(self):
+        for record in self:
+            if record.video_filename and not record.video_filename.lower().endswith('.mp4'):
+                raise ValidationError("Only MP4 format is supported for the video.")
+
