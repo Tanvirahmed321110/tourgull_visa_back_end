@@ -278,31 +278,35 @@
                                         <!-- for name -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Name</div>
-                                            <input  type="text" name="name"/>
+                                            <input type="text" name="name"/>
                                         </div>
 
                                         <!-- for email -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Email</div>
-                                            <input type="email" name="email" />
+                                            <input type="email" name="email"/>
                                         </div>
 
                                         <!-- for phone -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Phone</div>
-                                            <input  type="text" required="required" name="phone"/>
+                                            <input type="text" required="required" name="phone"/>
                                         </div>
 
                                         <!-- for description -->
                                         <div class="my-input-control">
                                             <div class="my-fw-medium my-text-gray">Note</div>
-                                           <textarea name="description" required="required"></textarea>
+                                            <textarea name="description" required="required"></textarea>
                                         </div>
 
                                         <!--  submit button -->
                                         <div class="my-mt-2">
                                             <button type="submit" class="my-btn my-primary-btn my-w-100">Submit</button>
                                         </div>
+
+                                        <!--   error sms -->
+                                       <p t-att-class="'my-text-red' if form_error else 'my-d-none'">Please Fill up all</p>
+
                                     </form>
                                 </div>
                             </div>

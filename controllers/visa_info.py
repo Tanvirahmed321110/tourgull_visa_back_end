@@ -15,6 +15,7 @@ class VisaInfo(http.Controller):
             'visa_data': visa_data,
             'suggest_slider': suggest_slider,
             'category': category,
+            'form_error': True,
         })
 
     # Contact Submit

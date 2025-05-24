@@ -1,0 +1,41 @@
+
+<odoo>
+    <data>
+        <!-- ========  List View  =======-->
+        <record model="ir.ui.view" id="tourgull_visa_continent_list">
+            <field name="name">Continent</field>
+            <field name="model">tourgull_visa.continent</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- ========  Form  View  =======-->
+        <record model="ir.ui.view" id="tourgull_visa_continent_form">
+            <field name="name">Tourgull Continent List</field>
+            <field name="model">tourgull_visa.continent</field>
+            <field name="arch" type="xml">
+                  <form>
+                    <sheet>
+                        <group string="Continent List">
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ========  Action View  =======-->
+        <record model="ir.actions.act_window" id="tourgull_visa_continent_action">
+            <field name="name">Continent window</field>
+            <field name="res_model">tourgull_visa.continent</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

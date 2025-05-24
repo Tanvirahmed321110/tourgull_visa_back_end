@@ -34,19 +34,15 @@
                                     <source src="./banner-video1.mp4" type="video/mp4">
                                 </video> -->
                                 <img class="banner-video"
-                                     src="https://images.unsplash.com/photo-1707344088547-3cf7cea5ca49?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                     t-att-src="image_data_uri(all_country_data.slider_image)"
                                      alt=""/>
 
                                 <!--===== Search Content =====-->
                                 <div class="search-content">
 
-                                    <h1 class="my-text-center my-fs-xxl">Welcome To...</h1>
-                                    <p class="my-p-4 my-text-primary my-fs-md my-text-center">Lorem ipsum dolor sit amet
-                                        consectetur
-                                        adipisicing elit. Deserunt
-                                        atque eveniet
-                                        reprehenderit impedit laboriosam autem, nisi, nihil aliquid molestias illum
-                                        aspernatur odit in ipsa fugiat sint expedita fugit minima sequi!
+                                    <h1 class="my-text-center my-fs-xxl" t-esc="all_country_data.slider_top_content_title">Welcome To...</h1>
+                                    <p class="my-p-4 my-text-primary my-fs-md my-text-center" t-esc="all_country_data.slider_top_content_description">Lorem ipsum dolor sit amet
+
                                     </p>
                                 </div>
                             </div>
@@ -75,55 +71,30 @@
                                             <div class="my-flex-column filter-category my-gap-0 my-mt-1">
 
                                                 <!-- single category -->
-                                                <div class="my-flex-between my-align-center ">
-                                                    <div class="my-fs-sm my-fw-medium">Tourist</div>
+                                                <div t-foreach="categories" t-as="item"
+                                                     class="my-flex-between my-align-center ">
+                                                    <div class="my-fs-sm my-fw-medium">
+                                                        <label t-esc="item.name" t-att-for="'category-' + str(item.id)">
+                                                            Tourist
+                                                        </label>
+                                                    </div>
                                                     <div class="my-input-control">
-                                                        <input type="checkbox" name="category" id="category-1"/>
+                                                        <input type="checkbox"
+                                                               t-att-id="'category-' + str(item.id)"
+                                                               t-att-name="'category-' + str(item.id)"/>
                                                     </div>
                                                 </div>
-                                                <!-- single category -->
-                                                <div class="my-flex-between my-align-center ">
-                                                    <div class="my-fs-sm my-fw-medium">Business &amp; Investment</div>
-                                                    <div class="my-input-control">
-                                                        <input type="checkbox" name="category" id="category-2"/>
-                                                    </div>
-                                                </div>
-                                                <!-- single category -->
-                                                <div class="my-flex-between my-align-center">
-                                                    <div class="my-fs-sm my-fw-medium">Medical &amp; Treatment</div>
-                                                    <div class="my-input-control">
-                                                        <input type="checkbox" name="category" id="category-3"/>
-                                                    </div>
-                                                </div>
-                                                <!-- single category -->
-                                                <div class="my-flex-between my-align-center ">
-                                                    <div class="my-fs-sm my-fw-medium">Study &amp; Training</div>
-                                                    <div class="my-input-control">
-                                                        <input type="checkbox" name="category" id="category-4"/>
-                                                    </div>
-                                                </div>
-                                                <!-- single category -->
-                                                <div class="my-flex-between my-align-center ">
-                                                    <div class="my-fs-sm my-fw-medium">Study</div>
-                                                    <div class="my-input-control">
-                                                        <input type="checkbox" name="category" id="category-5"/>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
 
                                         <div class="my-mt-5">
                                             <h4 class="my-uppercase">Continent</h4>
                                             <ul class="my-d-flex flex-wrap my-grid-2 my-mt-1 keywords my-gap-2">
-                                                <li class="key">Asia</li>
-                                                <li class="key">Africa</li>
-                                                <li class="key">Europe</li>
-                                                <li class="key">South Asia</li>
-                                                <li class="key">North America</li>
-                                                <li class="key">Australia</li>
-                                                <li class="key">Antarctica</li>
+                                                <li t-foreach="continent" t-as="item" t-esc="item.name" class="key">
+                                                    Asia
+                                                </li>
                                             </ul>
-
                                         </div>
                                     </form>
                                 </div>
@@ -304,74 +275,26 @@
                 <section class=" my-mt-10 my-p-4 suggest-services my-radius-md">
                     <div class="my-container">
                         <div class="my-text-center">
-                            <h3 class="my-uppercase ">Suggest Services</h3>
-                            <p>Short Description</p>
+                            <h3 class="my-uppercase " t-esc="all_country_data.suggest_servie_section_title">Suggest Services</h3>
+                            <p t-esc="all_country_data.suggest_service_section_description">Short Description</p>
                         </div>
                         <div class=" my-mt-4">
                             <div class="swiper suggest-slider mt-mt-2">
                                 <div class="swiper-wrapper mt-pt-2">
 
                                     <!-- single service item -->
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide" t-foreach="suggest_slider" t-as="item">
                                         <div class="my-p-relative suggest-item">
                                             <div class="img-wrapper">
                                                 <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/5192667/pexels-photo-5192667.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
+                                                     t-att-src="image_data_uri(item.image_1920)"
                                                      alt=""/>
                                             </div>
-                                            <h4 class="my-text-white text">Bangladesh</h4>
+                                            <h4 class="my-text-white text" t-as="item.name">Bangladesh</h4>
 
                                         </div>
                                     </div>
 
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/10835243/pexels-photo-10835243.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Nepal</h4>
-
-                                        </div>
-                                    </div>
-
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Kasmir</h4>
-                                        </div>
-                                    </div>
-
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/6871148/pexels-photo-6871148.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Maldip</h4>
-                                        </div>
-                                    </div>
-
-                                    <!-- single service item -->
-                                    <div class="swiper-slide">
-                                        <div class="my-p-relative suggest-item">
-                                            <div class="img-wrapper">
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/19828854/pexels-photo-19828854/free-photo-of-city-buildings-with-the-karst-formations-of-the-ha-long-bay-in-the-background.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <h4 class="my-text-white text">Pakistan</h4>
-                                        </div>
-                                    </div>
 
 
                                 </div>

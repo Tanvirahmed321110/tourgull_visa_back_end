@@ -95,4 +95,12 @@
             parent="menu_visa"
             action="action_tourgull_visa_contact"
             sequence="0"/>
+
+    <!--======= Submenu Parent Menu Visa ======-->
+    <menuitem
+            name="Continent"
+            id="menu_continent"
+            parent="menu_visa"
+            action="tourgull_visa_continent_action"
+            sequence="0"/>
 </odoo>
