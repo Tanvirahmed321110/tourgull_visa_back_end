@@ -40,8 +40,12 @@
                                 <!--===== Search Content =====-->
                                 <div class="search-content">
 
-                                    <h1 class="my-text-center my-fs-xxl" t-esc="all_country_data.slider_top_content_title">Welcome To...</h1>
-                                    <p class="my-p-4 my-text-primary my-fs-md my-text-center" t-esc="all_country_data.slider_top_content_description">Lorem ipsum dolor sit amet
+                                    <h1 class="my-text-center my-fs-xxl"
+                                        t-esc="all_country_data.slider_top_content_title">Welcome To...
+                                    </h1>
+                                    <p class="my-p-4 my-text-primary my-fs-md my-text-center"
+                                       t-esc="all_country_data.slider_top_content_description">Lorem ipsum dolor sit
+                                        amet
 
                                     </p>
                                 </div>
@@ -117,150 +121,25 @@
                                     </div>
                                     <div class="my-grid-3 destination-items my-grid-md-2 my-mt-4 my-gap-3">
 
-                                        <!-- single item -->
-                                        <div class="item my-p-relative my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/12877829/pexels-photo-12877829.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">Bangladesh</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
+                                        <t t-foreach="country" t-as="item">
+                                            <!-- single item -->
+                                            <a t-att-href="item.url"
+                                               class="item my-p-relative my-border my-p-2 my-radius-md my-shadow-1">
+                                                <div>
+                                                    <img class="my-radius-md"
+                                                         t-att-src="image_data_uri(item.image_1920)"
+                                                         alt=""/>
+                                                </div>
+                                                <div class="my-mt-3">
+                                                    <div class="my-fw-medium my-fs-md" t-esc="item.name">Bangladesh</div>
+                                                </div>
+                                                <!-- Hide Content -->
+                                                <div class="hide-content">
+                                                    <h5>Click and show Details</h5>
+                                                </div>
+                                            </a>
+                                        </t>
 
-
-                                        <!-- single item -->
-                                        <div class="item my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/13388611/pexels-photo-13388611.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600&amp;lazy=load"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">USA</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- single item -->
-                                        <div class="item my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/128234/pexels-photo-128234.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">Bhutan</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- single item -->
-                                        <div class="item my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">Bangladesh</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- single item -->
-                                        <div class="item my-p-relative my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/12877829/pexels-photo-12877829.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">Bangladesh</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- single item -->
-                                        <div class="item my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">Finland</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- single item -->
-                                        <div class="item my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/13388611/pexels-photo-13388611.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600&amp;lazy=load"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">USA</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- single item -->
-                                        <div class="item my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/128234/pexels-photo-128234.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">Bhutan</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- single item -->
-                                        <div class="item my-border my-p-2 my-radius-md my-shadow-1">
-                                            <div>
-                                                <img class="my-radius-md"
-                                                     src="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2"
-                                                     alt=""/>
-                                            </div>
-                                            <div class="my-mt-3">
-                                                <div class="my-fw-medium my-fs-md">Bangladesh</div>
-                                            </div>
-                                            <!-- Hide Content -->
-                                            <div class="hide-content">
-                                                <h5>Click and show Details</h5>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +154,9 @@
                 <section class=" my-mt-10 my-p-4 suggest-services my-radius-md">
                     <div class="my-container">
                         <div class="my-text-center">
-                            <h3 class="my-uppercase " t-esc="all_country_data.suggest_servie_section_title">Suggest Services</h3>
+                            <h3 class="my-uppercase " t-esc="all_country_data.suggest_servie_section_title">Suggest
+                                Services
+                            </h3>
                             <p t-esc="all_country_data.suggest_service_section_description">Short Description</p>
                         </div>
                         <div class=" my-mt-4">
@@ -283,7 +164,8 @@
                                 <div class="swiper-wrapper mt-pt-2">
 
                                     <!-- single service item -->
-                                    <a t-att-href="item.url" class="swiper-slide" t-foreach="suggest_slider" t-as="item">
+                                    <a t-att-href="item.url" class="swiper-slide" t-foreach="suggest_slider"
+                                       t-as="item">
                                         <div class="my-p-relative suggest-item">
                                             <div class="img-wrapper">
                                                 <img class="my-radius-md"

@@ -90,7 +90,7 @@
                         <img class="my-radius-md " t-att-src="image_data_uri(home_data.ad1_image)" alt=""/>
                         <!-- content -->
                         <div class="content my-grid-3 ">
-                            <div> </div>
+                            <div></div>
                             <div>
                                 <p class="my-fw-bold my-fs-md my-text-white" t-esc="home_data.ad1_description">Plan Your
                                     Next Your
@@ -121,15 +121,39 @@
 
                     <div class="tab-area my-mt-3">
                         <div class="tab-buttons my-align-start my-flex-between my-gap-2 my-flex-md-column">
-                            <ul class="my-d-flex my-gap-2 my-flex-md-column">
-                                <li class="tab-button active" t-att-data-tab="Tourist">
+                            <!--                            <ul class="my-d-flex my-gap-2 my-flex-md-column">-->
+                            <!--                                <li class="tab-button active" t-att-data-tab="Tourist">-->
+                            <!--                                    Tourist-->
+                            <!--                                </li>-->
+                            <!--                                <li class="tab-button" data-tab="business">Business Investment</li>-->
+                            <!--                                <li class="tab-button" data-tab="medical">Medical Treatment</li>-->
+                            <!--                                <li class="tab-button" data-tab="stydy">Study Training</li>-->
+                            <!--                                <li class="tab-button" data-tab="other">Other</li>-->
+                            <!--                            </ul>-->
+
+
+                            <t t-set="counter" t-value="0"/>
+                            <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">
+                                <li t-foreach="categories" t-as="item"
+                                    t-esc="item.name"
+                                    t-att-class="'tab-button ' + ('active' if counter == 0 else '')"
+                                    t-att-data-tab="item.id"
+                                >
                                     Tourist
+                                    <t t-set="counter" t-value="counter + 1"/>
                                 </li>
-                                <li class="tab-button" data-tab="business">Business Investment</li>
-                                <li class="tab-button" data-tab="medical">Medical Treatment</li>
-                                <li class="tab-button" data-tab="stydy">Study Training</li>
-                                <li class="tab-button" data-tab="other">Other</li>
                             </ul>
+
+
+<!--                            <t t-set="counter" t-value="0"/>-->
+                            <!--                                        <ul class="my-d-flex my-gap-2 my-flex-md-column my-grid-3 my-grid-md-2">-->
+                            <!--                                            <t t-foreach="country_info" t-as="item">-->
+                            <!--                                                <li t-att-class="'tab-button ' + ('active' if counter == 0 else '')"-->
+                            <!--                                                    t-att-data-tab="item.id"-->
+                            <!--                                                    t-esc="item.name"/>-->
+                            <!--                                                <t t-set="counter" t-value="counter + 1"/>-->
+                            <!--                                            </t>-->
+                            <!--                                        </ul>-->
 
                             <div class="my-bg-white-off my-p-2 my-px-4 search-country-name my-radius-md">
                                 <div class="my-input-control ">
