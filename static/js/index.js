@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function () {
 // for category dropdown item active class added
 activeF('.category-area .dropdown-item')
 
@@ -57,3 +57,5 @@ var swiper = new Swiper(".special-offer-slider", {
 
 // Usage tab for home page
 setupTabs('.tab-buttons .tab-button', '.tab-contents .tab-content');
+
+})

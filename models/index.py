@@ -12,8 +12,12 @@ class Tourgull_visa(models.Model):
 
     # For Video Slide
     is_video = fields.Boolean(string='Is Video?')
-    video_file = fields.Binary(string='Video File')
+    video_file = fields.Binary(string='Video File', attachment=True)
+    video_url = fields.Char(string='Video URL', help="Use this for externally hosted videos (YouTube, Vimeo)")
     video_filename = fields.Char(string='Filename')
+    video_autoplay = fields.Boolean(string='Autoplay', default=True)
+    video_muted = fields.Boolean(string='Muted', default=True)
+    video_loop = fields.Boolean(string='Loop', default=True)
 
     # For ad 1
     ad1_image = fields.Image(string='Ad1 Image')

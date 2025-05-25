@@ -130,30 +130,42 @@
                             <!--                                <li class="tab-button" data-tab="stydy">Study Training</li>-->
                             <!--                                <li class="tab-button" data-tab="other">Other</li>-->
                             <!--                            </ul>-->
+                            <!--                            <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">-->
+                            <!--                                <li t-foreach="categories" t-as="item" t-foreach-index="index">-->
+                            <!--                                    <t t-if="index == 0">-->
+                            <!--                                        <li class="tab-button active" t-att-data-tab="item.id">-->
+                            <!--                                            <t t-esc="item.name"/>-->
+                            <!--                                        </li>-->
+                            <!--                                    </t>-->
+                            <!--                                    <t t-else="">-->
+                            <!--                                        <li class="tab-button" t-att-data-tab="item.id">-->
+                            <!--                                            <t t-esc="item.name"/>-->
+                            <!--                                        </li>-->
+                            <!--                                    </t>-->
+                            <!--                                </li>-->
+                            <!--                            </ul>-->
 
 
-                            <t t-set="counter" t-value="0"/>
-                            <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">
-                                <li t-foreach="categories" t-as="item"
-                                    t-esc="item.name"
-                                    t-att-class="'tab-button ' + ('active' if counter == 0 else '')"
-                                    t-att-data-tab="item.id"
-                                >
-                                    Tourist
-                                    <t t-set="counter" t-value="counter + 1"/>
-                                </li>
+<!--                            <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">-->
+<!--                                <t t-foreach="categories" t-as="item">-->
+<!--                                    <li t-att-class="'tab-button' + (' active' if item.id == categories[0].id else '')"-->
+<!--                                        t-att-data-tab="item.id">-->
+<!--                                        <t t-esc="item.name"/>-->
+<!--                                    </li>-->
+<!--                                </t>-->
+<!--                            </ul>-->
+
+                            <t t-set="count" t-value="0"/>
+                              <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">
+                                <t t-foreach="categories" t-as="item">
+                                    <li t-att-class="'tab-button' + (' active' if count == 0 else '')"
+                                        t-att-data-tab="item.id">
+                                        <t t-esc="item.name"/>
+                                        <t t-set="count" t-value="count + 1"/>
+                                    </li>
+                                </t>
                             </ul>
 
-
-<!--                            <t t-set="counter" t-value="0"/>-->
-                            <!--                                        <ul class="my-d-flex my-gap-2 my-flex-md-column my-grid-3 my-grid-md-2">-->
-                            <!--                                            <t t-foreach="country_info" t-as="item">-->
-                            <!--                                                <li t-att-class="'tab-button ' + ('active' if counter == 0 else '')"-->
-                            <!--                                                    t-att-data-tab="item.id"-->
-                            <!--                                                    t-esc="item.name"/>-->
-                            <!--                                                <t t-set="counter" t-value="counter + 1"/>-->
-                            <!--                                            </t>-->
-                            <!--                                        </ul>-->
 
                             <div class="my-bg-white-off my-p-2 my-px-4 search-country-name my-radius-md">
                                 <div class="my-input-control ">
@@ -168,7 +180,7 @@
                     <div class="tab-contents my-mt-4">
 
                         <!--=========  For Tourist  ========-->
-                        <div class="tab-content active" id="Tourist">
+                        <div class="tab-content active" id="1">
 
                             <div class=" my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
@@ -326,7 +338,7 @@
                         </div>
 
                         <!--=========  For Business and Investment  ========-->
-                        <div class="tab-content  " id="business">
+                        <div class="tab-content  " id="2">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
@@ -348,7 +360,7 @@
 
 
                         <!--=========  For Medical &amp; Treatment  ========-->
-                        <div class="tab-content" id="medical">
+                        <div class="tab-content" id="3">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
@@ -406,7 +418,7 @@
 
 
                         <!--=========  For Study &amp; Training  ========-->
-                        <div class="tab-content  " id="stydy">
+                        <div class="tab-content  " id="4">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
@@ -446,7 +458,7 @@
 
 
                         <!--=========  For Others  ========-->
-                        <div class="tab-content  " id="other">
+                        <div class="tab-content  " id="5">
                             <div class="my-grid-5 my-grid-md-2 my-gap-3">
                                 <!-- single item -->
                                 <div class="item my-border my-p-2 my-radius-md my-shadow-1">
