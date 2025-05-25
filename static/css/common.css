@@ -106,8 +106,9 @@ header img {
     padding: 18px;
     margin-top: 10px;
 }
+
 .search-content .search-btn:hover {
-    color:white;
+    color: white;
 }
 
 
@@ -155,7 +156,7 @@ header img {
 .category-area .dropdown .dropdown-item.active,
 .category-area .dropdown .dropdown-item:hover {
     background-color: var(--border-color);
-    color:var(--text-color)
+    color: var(--text-color)
 }
 
 
@@ -321,7 +322,9 @@ header img {
     background-color: unset;
 }
 
-
+.input-error {
+    border: 1px solid red !important;
+}
 
 
 
@@ -392,8 +395,8 @@ footer .bp__footer-ul li {
     border-color: var(--primary-color);
 }
 
-.special-offer-slider .my-primary-btn{
-    color:var(--border-color) !important ;
+.special-offer-slider .my-primary-btn {
+    color: var(--border-color) !important;
 }
 
 

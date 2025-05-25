@@ -19,6 +19,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js?v=1"></script>
 
                 <script src="/tourgull_visa/static/js/main.js?v=1"></script>
+                <script src="/tourgull_visa/static/js/visa_info.js?v=1"></script>
             </t>
 
 
@@ -272,7 +273,7 @@
                                 <div class=" right-form my-p-3 ">
                                     <h3 class="my-text-white">Information</h3>
 
-                                    <form action="/visa/contact_submit" method="POST" class="my-flex-column my-gap-1">
+                                    <form action="/visa/contact_submit" method="POST" id="contact_submit_from" class="my-flex-column my-gap-1">
                                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
 
                                         <!-- for name -->
@@ -305,7 +306,7 @@
                                         </div>
 
                                         <!--   error sms -->
-                                       <p t-att-class="'my-text-red' if form_error else 'my-d-none'">Please Fill up all</p>
+                                         <p class="my-text-white error_tag" style="display: none;">Please fill out all fields correctly.</p>
 
                                     </form>
                                 </div>
