@@ -99,18 +99,16 @@
                             <div class="left my-order-md-1">
                                 <div class="tab-area">
                                     <div class="tab-buttons ">
+                                        <t t-set="counter" t-value="0"/>
                                         <ul class="my-d-flex my-gap-2 my-flex-md-column my-grid-3 my-grid-md-2">
-                                            <li t-foreach="category" t-as="item" t-esc="item.name"
-                                                class="tab-button active" t-att-data-tab="item.id">Information and
-                                                Requirement
-                                            </li>
-                                            <!--                                            <li class="tab-button" data-tab="progessing_time">Progessing Time</li>-->
-                                            <!--                                            <li class="tab-button" data-tab="faq">FAQ</li>-->
-                                            <!--                                            <li class="tab-button" data-tab="office">Head office and Regional office-->
-                                            <!--                                            </li>-->
-                                            <!--                                            <li class="tab-button" data-tab="visa_free">Visa Free</li>-->
-                                            <!--                                            <li class="tab-button" data-tab="specification">Photo Specification</li>-->
+                                            <t t-foreach="country_info" t-as="item">
+                                                <li t-att-class="'tab-button ' + ('active' if counter == 0 else '')"
+                                                    t-att-data-tab="item.id"
+                                                    t-esc="item.name"/>
+                                                <t t-set="counter" t-value="counter + 1"/>
+                                            </t>
                                         </ul>
+
                                     </div>
                                 </div>
 
@@ -119,151 +117,47 @@
                                 <div class="tab-contents my-mt-4">
 
                                     <!--=========  For information  ========-->
-                                    <div class="tab-content active" id="1">
-                                        <div>
-                                            <h3>information</h3>
-                                            <div class="my-p-2">
-                                                <p>
-                                                    A user-friendly platform offering detailed visa requirements for
-                                                    numerous
-                                                    countries, including the U.S., Schengen Area,
-                                                    Canada, UK, and Australia. It provides step-by-step instructions for
-                                                    various
-                                                    visa types and
-                                                </p>
-                                                <p class="my-mt-3">
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                                                    deserunt illo iure, sapiente officiis harum? Quam, eius ducimus
-                                                    porro
-                                                    consequuntur amet, ex laboriosam, illo explicabo dolorem non atque
-                                                    delectus neque.
-                                                </p>
-                                                <p class="my-mt-3">
-                                                    sit amet consectetur adipisicing elit. Aliquam
-                                                    deserunt illo iure, sapiente officiis harum? Quam, eius ducimus
-                                                    porro
-                                                    consequuntur amet, ex laboriosam, illo explicabo dolorem non atque
-                                                    delectus neque.
-                                                </p>
-                                                <p class="my-mt-3">
-                                                    Lorem, dolor sit amet consectetur adipisicing elit. Aliquam
-                                                    deserunt illo iure, sapiente officiis harum? Quam, eius ducimus
-                                                    porro
-                                                    consequuntur amet, ex laboriosam, illo explicabo dolorem non atque
-                                                    delectus neque.
-                                                </p>
-                                                <p class="my-mt-3">
-                                                    , ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                                                    deserunt illo iure, sapiente officiis harum? Quam, eius ducimus
-                                                    porro
-                                                    consequuntur amet, ex laboriosam, illo explicabo dolorem non atque
-                                                    delectus neque.
-                                                </p>
-
-                                                <h3 class="my-mt-4">Other info</h3>
-                                                <ul class="my-mt-0 disk my-flex-column my-gap-1">
-                                                    <li>Lorem ipsum dolor sit amet.</li>
-                                                    <li>Lorem ipsum dolor sit amet.</li>
-                                                    <li>Lorem ipsum dolor sit amet.</li>
-                                                    <li>Lorem ipsum dolor sit amet.</li>
-                                                    <li>Lorem ipsum dolor sit amet.</li>
-                                                    <li>Lorem ipsum dolor sit amet.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--=========  For information  ========-->
-                                    <div class="tab-content " id="2">
-                                        <div>
-                                            <h4>progessing_time</h4>
-                                            <ul class="my-p-2 disk">
-                                                <li>
-                                                    A user-friendly platform offering detailed visa requirements for
-                                                    numerous
-                                                    countries, including the U.S., Schengen Area,
-                                                    Canada, UK, and Australia. It provides step-by-step instructions for
-                                                    various
-                                                    visa types and
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--=========  For information  ========-->
-                                    <div class="tab-content " id="3">
-                                        <div>
-                                            <h4>information</h4>
-                                            <div class="my-p-3">
-                                                <div class="my-p-2">
-                                                    <p>
-                                                        A user-friendly platform offering detailed visa requirements for
-                                                        numerous
-                                                        countries, including the U.S., Schengen Area,
-                                                        Canada, UK, and Australia. It provides step-by-step instructions
-                                                        for
-                                                        various
-                                                        visa types and
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--=========  For information  ========-->
-                                    <div class="tab-content " id="4">
-                                        <div>
-                                            <h4>information</h4>
-                                            <div class="my-p-2">
-                                                <p>
-                                                    This guide covers different visa types, application procedures,
-                                                    required
-                                                    documents, fees, and information on visa-free
-                                                    countries. It's a valuable resource for travelers seeking
-                                                    comprehensive
-                                                    visa information.
-                                                </p>
-                                                <p>
-                                                    This guide covers different visa types, application procedures,
-                                                    required
-                                                    documents, fees, and information on visa-free
-                                                    countries. It's a valuable resource for travelers seeking
-                                                    comprehensive
-                                                    visa information.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--=========  For information  ========-->
-                                    <div class="tab-content " id="5">
-                                        <div>
-                                            <h4>information</h4>
-                                            <div class="my-p-2">
-                                                <p>
-                                                    A user-friendly platform offering detailed visa requirements for
-                                                    numerous
-                                                    countries, including the U.S., Schengen Area,
-                                                    Canada, UK, and Australia. It provides step-by-step instructions for
-                                                    various
-                                                    visa types and
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--=========  For information  ========-->
-                                    <div class="tab-content " id="6">
-                                        <div>
-                                            <h4>information</h4>
-                                            <div class="my-p-2">
-                                                <p>
-                                                    A user-friendly platform offering detailed visa requirements for
-                                                    numerous
-                                                    countries, including the U.S., Schengen Area,
-                                                    Canada, UK, and Australia. It provides step-by-step instructions for
-                                                    various
-                                                    visa types and
-                                                </p>
-                                            </div>
-                                        </div>
+                                    <div class="tab-content active" t-att-id="item.id" t-foreach="country_info"
+                                         t-as="item">
+                                        <t>
+                                            <t t-raw="item.description"/>
+                                        </t>
                                     </div>
 
+                                    <!--                                    &lt;!&ndash;=========  For progessing_time  ========&ndash;&gt;-->
+                                    <!--                                    <div class="tab-content " id="2">-->
+                                    <!--                                        <t  t-if="country_to_country.process_time">-->
+                                    <!--                                            <t t-raw="country_to_country.process_time"/>-->
+                                    <!--                                        </t>-->
+                                    <!--                                    </div>-->
+
+                                    <!--                                     &lt;!&ndash;=========  For progessing_time  ========&ndash;&gt;-->
+                                    <!--                                    <div class="tab-content " id="3">-->
+                                    <!--                                        <t  t-if="country_to_country.faq">-->
+                                    <!--                                            <t t-raw="country_to_country.faq"/>-->
+                                    <!--                                        </t>-->
+                                    <!--                                    </div>-->
+
+                                    <!--                                     &lt;!&ndash;=========  For progessing_time  ========&ndash;&gt;-->
+                                    <!--                                    <div class="tab-content " id="4">-->
+                                    <!--                                        <t  t-if="country_to_country.head_office_regional_office">-->
+                                    <!--                                            <t t-raw="country_to_country.head_office_regional_office"/>-->
+                                    <!--                                        </t>-->
+                                    <!--                                    </div>-->
+
+                                    <!--                                     &lt;!&ndash;=========  For progessing_time  ========&ndash;&gt;-->
+                                    <!--                                    <div class="tab-content " id="5">-->
+                                    <!--                                        <t  t-if="country_to_country.visa_free">-->
+                                    <!--                                            <t t-raw="country_to_country.visa_free"/>-->
+                                    <!--                                        </t>-->
+                                    <!--                                    </div>-->
+
+                                    <!--                                     &lt;!&ndash;=========  For progessing_time  ========&ndash;&gt;-->
+                                    <!--                                    <div class="tab-content " id="6">-->
+                                    <!--                                        <t  t-if="country_to_country.photo_specification">-->
+                                    <!--                                            <t t-raw="country_to_country.photo_specification"/>-->
+                                    <!--                                        </t>-->
+                                    <!--                                    </div>-->
                                 </div>
                             </div>
 
@@ -273,7 +167,8 @@
                                 <div class=" right-form my-p-3 ">
                                     <h3 class="my-text-white">Information</h3>
 
-                                    <form action="/visa/contact_submit" method="POST" id="contact_submit_from" class="my-flex-column my-gap-1">
+                                    <form action="/visa/contact_submit" method="POST" id="contact_submit_from"
+                                          class="my-flex-column my-gap-1">
                                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
 
                                         <!-- for name -->
@@ -306,7 +201,10 @@
                                         </div>
 
                                         <!--   error sms -->
-                                         <p class="my-text-white error_tag" style="display: none;">Please fill out all fields correctly.</p>
+                                        <p class="my-text-white error_tag" style="display: none;">Please fill out all
+                                            fields
+                                            correctly.
+                                        </p>
 
                                     </form>
                                 </div>

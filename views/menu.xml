@@ -85,7 +85,7 @@
             name="Country To Country Info"
             id="menu_country_to_country_info"
             parent="menu_visa"
-            action="action_country_to_country_info"
+            action="action_con_to_con"
             sequence="0"/>
 
     <!--======= Submenu Parent Menu Visa ======-->
@@ -102,5 +102,13 @@
             id="menu_continent"
             parent="menu_visa"
             action="tourgull_visa_continent_action"
+            sequence="0"/>
+
+    <!--======= Submenu Parent Menu Visa ======-->
+    <menuitem
+            name="Country Info"
+            id="menu_tab_info"
+            parent="menu_visa"
+            action="tourgull_visa_country_info_action"
             sequence="0"/>
 </odoo>

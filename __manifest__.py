@@ -39,6 +39,7 @@
         'views/country_to_country_info_view.xml',
         'views/contact_view.xml',
         'views/continent_view.xml',
+        'views/country_info_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

@@ -10,12 +10,14 @@ class VisaInfo(http.Controller):
         visa_data = req.env['tourgull_visa.visa_info'].sudo().search([], limit=1)
         suggest_slider = req.env['tourgull_visa.suggest_service_slider'].sudo().search([])
         category = req.env['tourgull_visa.category'].sudo().search([])
+        country_info = req.env['tourgull_visa.country_info'].search([])
 
         return req.render('tourgull_visa.visa_info', {
             'visa_data': visa_data,
             'suggest_slider': suggest_slider,
             'category': category,
             'form_error': True,
+            'country_info' : country_info
         })
 
     # Contact Submit
