@@ -22,6 +22,7 @@
                         <group string="Country Information">
                             <group>
                                 <field name="name"/>
+                                <field name="url"/>
                             </group>
 
                             <group >

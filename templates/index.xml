@@ -85,12 +85,12 @@
             <!--==========================================-->
             <section class="my-mt-10">
                 <div class="my-container">
-                    <div class="ads-banner-1 my-p-relative  ">
+                    <a t-att-href="home_data.ad1_url" class="ads-banner-1 my-p-relative  ">
 
                         <img class="my-radius-md " t-att-src="image_data_uri(home_data.ad1_image)" alt=""/>
                         <!-- content -->
                         <div class="content my-grid-3 ">
-                            <div></div>
+                            <div> </div>
                             <div>
                                 <p class="my-fw-bold my-fs-md my-text-white" t-esc="home_data.ad1_description">Plan Your
                                     Next Your
@@ -103,7 +103,7 @@
                                 <button class="my-btn my-primary-btn my-btn-sm">Start Now</button>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </section>
 
@@ -606,7 +606,7 @@
             <!-- ads -->
             <section class="my-mt-10">
                 <div class="my-container">
-                    <a href="#">
+                    <a t-att-href="home_data.ad2_url">
                         <t t-if="home_data.ad2_image">
                             <img class="my-radius-md my-border my-p-1"
                                  t-att-src="image_data_uri(home_data.ad2_image)"

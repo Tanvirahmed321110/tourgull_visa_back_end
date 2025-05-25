@@ -9,5 +9,6 @@ class Tourgull_visa(models.Model):
     name = fields.Char(string='Country Name', required=True)
     image_1920 = fields.Image(string='Country Image', required=True)
     country_image_url = fields.Char(string='Country Image Url')
+    url = fields.Char(string='Url')
 
 
