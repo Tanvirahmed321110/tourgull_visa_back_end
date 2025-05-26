@@ -25,11 +25,16 @@
                                 <field name="url"/>
                             </group>
 
-                            <group >
+                            <group>
                                 <field name="image_1920" widget="image" class="oe_avatar"
                                        options="{'size': [90, 90]}"/>
                                 <field name="country_image_url"/>
                             </group>
+                        </group>
+
+                        <!-- Categories  -->
+                        <group string="Categories">
+                            <field name="categories "/>
                         </group>
                     </sheet>
                 </form>

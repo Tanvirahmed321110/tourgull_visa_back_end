@@ -11,4 +11,7 @@ class Tourgull_visa(models.Model):
     country_image_url = fields.Char(string='Country Image Url')
     url = fields.Char(string='Url')
 
+    # category model many to many
+    categories = fields.Many2many('tourgull_visa.category', string='Categories')
+
 
