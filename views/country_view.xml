@@ -34,7 +34,7 @@
 
                         <!-- Categories  -->
                         <group string="Categories">
-                            <field name="categories "/>
+                            <field name="categories_ids"/>
                         </group>
                     </sheet>
                 </form>

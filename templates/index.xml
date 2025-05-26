@@ -62,7 +62,7 @@
                                             <!-- Category Dropdown -->
                                             <div class="dropdown">
                                                 <div class="dropdown-item" t-foreach="categories" t-as="item"
-                                                     t-esc="item.name"></div>
+                                                     t-esc="item.name">  </div>
                                             </div>
                                         </div>
                                     </div>
@@ -675,7 +675,7 @@
                             <div class="swiper-wrapper mt-pt-2">
 
                                 <!-- single service item -->
-                                <a href="item.url" class="swiper-slide" t-foreach="suggest_slider" t-as="item">
+                                <a t-att-href="item.url"  class="swiper-slide" t-foreach="suggest_slider" t-as="item">
                                     <div class="my-p-relative suggest-item">
                                         <div class="img-wrapper">
                                             <img class="my-radius-md"

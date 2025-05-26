@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 from odoo.http import request as req
+import base64
+from server.odoo.addons.test_convert.tests.test_env import record
 
 
 class Visa(http.Controller):
@@ -15,22 +17,12 @@ class Visa(http.Controller):
         country = req.env['tourgull_visa.country'].sudo().search([])
         suggest_slider = req.env['tourgull_visa.suggest_service_slider'].sudo().search([])
 
-        # Build dictionary of category_id: country list
-        # category_countries = {}
-        # for item in categories:
-        #     countries = req.env['tourgull_visa.country'].sudo().search([
-        #         ('categories', 'in', [item.id])
-        #     ])
-        #     category_countries[item.id] = countries
-        student_countries = req.env['tourgull_visa.country'].sudo().search([
-            ('categories.name', '=', 'Tourist')
-        ])
-        tourist_countries = req.env['tourgull_visa.country'].sudo().search([
-            ('categories.name', '=', 'tourist')
-        ])
-        visa_countries = req.env['tourgull_visa.country'].sudo().search([
-            ('categories.name', '=', 'visa')
-        ])
+        # Prepare video source URL for direct embedding
+        video_source = None
+        if home_data.video_file:
+            video_source = f"data:video/mp4;base64,{home_data.video_file}"
+        elif home_data.video_url:
+            video_source = home_data.video_url
 
         return req.render('tourgull_visa.tourgull_visa', {
             'home_data': home_data,
@@ -38,5 +30,6 @@ class Visa(http.Controller):
             'offer_slider': offer_slider,
             'country': country,
             'suggest_slider': suggest_slider,
-            'category_countries': category_countries
+            'video_source' : video_source
         })
+

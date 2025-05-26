@@ -11,13 +11,9 @@ class Tourgull_visa(models.Model):
     slider_title = fields.Char(string='Slider Title')
 
     # For Video Slide
-    is_video = fields.Boolean(string='Is Video?')
     video_file = fields.Binary(string='Video File', attachment=True)
     video_url = fields.Char(string='Video URL', help="Use this for externally hosted videos (YouTube, Vimeo)")
-    video_filename = fields.Char(string='Filename')
-    video_autoplay = fields.Boolean(string='Autoplay', default=True)
-    video_muted = fields.Boolean(string='Muted', default=True)
-    video_loop = fields.Boolean(string='Loop', default=True)
+
 
     # For ad 1
     ad1_image = fields.Image(string='Ad1 Image')
@@ -49,9 +45,5 @@ class Tourgull_visa(models.Model):
     suggest_servie_section_title = fields.Char(string = 'Suggest Service Section Title')
     suggest_service_section_description = fields.Char(string = 'Suggest Service Section Description')
 
-    @api.constrains('video_filename')
-    def _check_video_format(self):
-        for record in self:
-            if record.video_filename and not record.video_filename.lower().endswith('.mp4'):
-                raise ValidationError("Only MP4 format is supported for the video.")
+
 

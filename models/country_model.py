@@ -12,6 +12,6 @@ class Tourgull_visa(models.Model):
     url = fields.Char(string='Url')
 
     # category model many to many
-    categories = fields.Many2many('tourgull_visa.category', string='Categories')
+    categories_ids = fields.Many2many('tourgull_visa.category', string='Categories')
 
 

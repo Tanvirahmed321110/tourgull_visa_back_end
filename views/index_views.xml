@@ -23,20 +23,18 @@
                 <form>
                     <sheet>
                         <group>
-                            <!-- sidebar -->
+                            <!-- sidebar  here-->
                             <group string="Slider">
                                 <field name="slider_title"/>
                                 <field name="slider" widget="image" class="oe_avatar" options="{'size': [90, 90]}"/>
                                 <field name="slider_image_url"/>
 
-                                <!--  video -->
-                                <field name="is_video"/>
-                                <field name="video_file" filename="video_filename"/>
-                                <field name="video_filename"/>
+                                <!--  video field here -->
+                                <field name="video_file"/>
                             </group>
 
 
-                            <!-- ad1 -->
+                            <!-- ad1 one here -->
                             <group string="Advertisement 1">
                                 <field name="ad1_image" widget="image" class="oe_avatar" options="{'size': [90, 90]}"/>
                                 <field name="ad1_title"/>
@@ -45,7 +43,7 @@
                                 <field name="ad1_url"/>
                             </group>
 
-                            <!-- ad2 -->
+                            <!-- ad2 here -->
                             <group string="Advertisement 2">
                                 <field name="ad2_image" widget="image" class="oe_avatar" options="{'size': [90, 90]}"/>
                                 <field name="ad2_image_url"/>
