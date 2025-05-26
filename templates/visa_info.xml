@@ -44,43 +44,35 @@
 
                                     <h1 class="my-text-center my-fs-xxl" t-esc="visa_data.slider_title">Welcome To...
                                     </h1>
-                                    <form action="#" class="my-mt-2">
+                                    <form class="my-mt-2">
 
-                                        <!-- search input and category -->
                                         <div class="my-grid-3 my-gap-5 my-grid-md-1">
+
                                             <div class="my-input-control">
-                                                <label for="from-input" class="">From</label>
-                                                <input type="text" value="Bangladesh" id="from-input"/>
+                                                <label for="from-input">From</label>
+                                                <input type="text" name="from" id="from-input"
+                                                       t-att-value="search_data.get('from', '')"/>
                                             </div>
 
                                             <div class="my-input-control">
-                                                <label for="to-input" class="">To</label>
-                                                <input type="text" value="Pakistan" id="to-input"/>
+                                                <label for="to-input">To</label>
+                                                <input type="text" name="to" id="to-input"
+                                                       t-att-value="search_data.get('to', '')"/>
                                             </div>
 
                                             <div class="my-p-relative my-input-control category-area">
                                                 <div class="category-btn">
-                                                    <label for="category-input" class="">Category</label>
-                                                    <input type="text" id="category-input" value="Tourist"/>
+                                                    <label for="category-input">Category</label>
+                                                    <input type="text" name="category" id="category-input"
+                                                           t-att-value="search_data.get('category', '')"/>
                                                     <div class="down-icon">▼</div>
                                                 </div>
-
-                                                <!-- Category Dropdown -->
-                                                <div class="dropdown">
-                                                    <div class="dropdown-item">Tourist</div>
-                                                    <div class="dropdown-item">Business &amp; Investment</div>
-                                                    <div class="dropdown-item">Medical &amp; Treatment</div>
-                                                    <div class="dropdown-item">Study &amp; Training</div>
-                                                    <div class="dropdown-item">Culture &amp; Tradition</div>
-                                                </div>
                                             </div>
+
                                         </div>
 
-                                        <!-- search button -->
-                                        <div class="my-mt-5 my-flex-center">
-                                            <button class="search-btn my-primary-btn my-btn">Search</button>
-                                        </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>

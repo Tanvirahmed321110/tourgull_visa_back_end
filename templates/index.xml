@@ -9,7 +9,7 @@
                     <t t-if="website" t-esc="website.name"/>
                 </title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=18"/>
+                <link rel="stylesheet" href="/tourgull_visa/static/css/common.css?v=21"/>
             </t>
             <t t-set="footer">
                 <!--<script src="/as_rental/static/js/event-detail.js?v=11"/>-->
@@ -38,39 +38,43 @@
                             <div class="search-content">
 
                                 <h1 class="my-text-center my-fs-xxl" t-esc="home_data.slider_title">AAAA</h1>
-                                <form action="#" class="my-mt-2">
+                                <form action="/visa/visa_info" method="GET" class="my-mt-2">
 
                                     <!-- search input and category -->
                                     <div class="my-grid-3 my-gap-5 my-grid-md-1">
                                         <div class="my-input-control">
                                             <label for="from-input" class="">From</label>
-                                            <input type="text" id="from-input"/>
+                                            <input type="text" name="from" id="from-input"/>
                                         </div>
 
                                         <div class="my-input-control">
                                             <label for="to-input" class="">To</label>
-                                            <input type="text" id="to-input"/>
+                                            <input type="text" name="to" id="to-input"/>
                                         </div>
 
                                         <div class="my-p-relative my-input-control category-area">
                                             <div class="category-btn">
                                                 <label for="category-input" class="">Category</label>
-                                                <input type="text" id="category-input"/>
+                                               <input type="text" name="category" id="category-input"/>
                                                 <div class="down-icon">▼</div>
                                             </div>
 
                                             <!-- Category Dropdown -->
                                             <div class="dropdown">
-                                                <div class="dropdown-item" t-foreach="categories" t-as="item"
-                                                     t-esc="item.name">  </div>
+                                                <div
+                                                        class="dropdown-item"
+                                                        t-foreach="categories"
+                                                        t-as="item"
+                                                        t-esc="item.name"
+                                                >
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- search button -->
                                     <div class="my-mt-5 my-flex-center">
-                                        <a href="/visa/visa_info" class="search-btn my-primary-btn my-btn">Search
-                                        </a>
+                                        <button type="submit" class="search-btn my-primary-btn my-btn">Search</button>
                                     </div>
                                 </form>
                             </div>
@@ -146,17 +150,17 @@
                             <!--                            </ul>-->
 
 
-<!--                            <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">-->
-<!--                                <t t-foreach="categories" t-as="item">-->
-<!--                                    <li t-att-class="'tab-button' + (' active' if item.id == categories[0].id else '')"-->
-<!--                                        t-att-data-tab="item.id">-->
-<!--                                        <t t-esc="item.name"/>-->
-<!--                                    </li>-->
-<!--                                </t>-->
-<!--                            </ul>-->
+                            <!--                            <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">-->
+                            <!--                                <t t-foreach="categories" t-as="item">-->
+                            <!--                                    <li t-att-class="'tab-button' + (' active' if item.id == categories[0].id else '')"-->
+                            <!--                                        t-att-data-tab="item.id">-->
+                            <!--                                        <t t-esc="item.name"/>-->
+                            <!--                                    </li>-->
+                            <!--                                </t>-->
+                            <!--                            </ul>-->
 
                             <t t-set="count" t-value="0"/>
-                              <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">
+                            <ul class="my-d-flex my-gap-2 flex-wrap my-flex-md-column">
                                 <t t-foreach="categories" t-as="item">
                                     <li t-att-class="'tab-button' + (' active' if count == 0 else '')"
                                         t-att-data-tab="item.id">
@@ -675,7 +679,7 @@
                             <div class="swiper-wrapper mt-pt-2">
 
                                 <!-- single service item -->
-                                <a t-att-href="item.url"  class="swiper-slide" t-foreach="suggest_slider" t-as="item">
+                                <a t-att-href="item.url" class="swiper-slide" t-foreach="suggest_slider" t-as="item">
                                     <div class="my-p-relative suggest-item">
                                         <div class="img-wrapper">
                                             <img class="my-radius-md"

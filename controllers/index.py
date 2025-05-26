@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 from odoo.http import request as req
-import base64
-from server.odoo.addons.test_convert.tests.test_env import record
 
 
 class Visa(http.Controller):
@@ -17,7 +15,7 @@ class Visa(http.Controller):
         country = req.env['tourgull_visa.country'].sudo().search([])
         suggest_slider = req.env['tourgull_visa.suggest_service_slider'].sudo().search([])
 
-        # Prepare video source URL for direct embedding
+        # video
         video_source = None
         if home_data.video_file:
             video_source = f"data:video/mp4;base64,{home_data.video_file}"
